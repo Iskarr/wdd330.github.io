@@ -9,17 +9,17 @@ unavailable.style.display = "none";
 const searchBar = document.forms["search-books"].querySelector("input");
 searchBar.addEventListener("keyup", function (e) {
   const term = e.target.value.toLocaleLowerCase();
-  const books = document.getElementsByTagName("h3");
+  const searchTag = document.getElementsByTagName("li");
   let notAvailable = document.getElementById("notAvailable");
 
   let hasResults = false;
-  Array.from(books).forEach(function (book) {
-    const title = book.textContent;
+  Array.from(searchTag).forEach(function (searchTag) {
+    const title = searchTag.textContent;
     if (title.toLowerCase().indexOf(term) != -1) {
-      book.style.display = "block";
+      searchTag.style.display = "block";
       hasResults = true;
     } else {
-      book.style.display = "none";
+      searchTag.style.display = "none";
     }
   });
   notAvailable.style.display = hasResults ? "none" : "block";
