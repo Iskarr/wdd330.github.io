@@ -16,7 +16,7 @@ searchBar.addEventListener("keyup", function (e) {
   Array.from(searchTag).forEach(function (searchTag) {
     const title = searchTag.textContent;
     if (title.toLowerCase().indexOf(term) != -1) {
-      searchTag.style.display = "block";
+      searchTag.style.display = "";
       hasResults = true;
     } else {
       searchTag.style.display = "none";

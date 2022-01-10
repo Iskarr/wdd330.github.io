@@ -3,6 +3,10 @@ const links = [
     label: "Week 01 notes",
     url: "week01/index.html",
   },
+  {
+    label: "Week 02 notes",
+    url: "week02/index.html",
+  },
 ];
 
 links.forEach((element) => {
