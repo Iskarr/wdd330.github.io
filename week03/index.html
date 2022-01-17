@@ -16,19 +16,28 @@
       }
       .objectTest {
         width: 250px;
-        height: 310px;
+        height: 325px;
         background-color: #e35;
         border-radius: 15px;
         margin: 15px;
         padding: 10px;
         padding-right: 5px;
       }
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+      .objectTest a {
+        font-size: 1.2em;
+        color: azure;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
     <h1>Week 03 Notes</h1>
 
-    <div>
+    <div class="container">
       <p class="this_paragraph">
         This reference gets the current object when you reference this without
         adding it after the forEach function it will reference the current
@@ -48,11 +57,20 @@
         <h3>},</h3>
         <h3>video.showTags();</h3>
       </div>
-    </div>
-    <div class="this_paragraph">
-      Please check into the test.js file provided inside this html file. It has
-      multiple other examples which will explain more about the global and
-      scoped versions of the "This" keyword.
+      <div class="this_paragraph">
+        Please check into the test.js file provided inside this html file. It
+        has multiple other examples which will explain more about the global and
+        scoped versions of the "This" keyword.
+      </div>
+      <div class="this_paragraph">
+        The other part is that this encompasses Objects as well and includes a
+        bit of understanding that objects are created using the new keyword.
+        Objects can include functions, key value pairs, properties, and
+        constructors.
+      </div>
+      <div class="objectTest">
+        <a href="events.html">Events examples page</a>
+      </div>
     </div>
   </body>
   <script src="test.js"></script>
