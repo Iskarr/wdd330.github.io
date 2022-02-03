@@ -15,6 +15,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Todo List</title>
   </head>
   <body>
@@ -61,7 +62,24 @@
       </div>
     </nav>
     <main>
-      <div>Todo List App</div>
+      <h4 class="text-center heading">Get Stuff Done</h4>
+
+      <div class="row">
+        <div class="columns large-8 large-offset-2">
+          <div class="columns medium-8">
+            <input id="todo-input" type="text" />
+          </div>
+          <div class="columns medium-4">
+            <button onclick="addItem()" class="button expanded">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="columns medium-8 medium-offset-2">
+          <ul id="list-items"></ul>
+        </div>
+      </div>
     </main>
     <script src="./script.js"></script>
   </body>

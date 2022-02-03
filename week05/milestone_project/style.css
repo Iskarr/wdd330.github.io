@@ -1,0 +1,85 @@
+.container {
+  border-radius: 10px;
+  text-align: center;
+  background-color: #807fbf;
+  margin: 0 auto;
+  width: 50%;
+  border: #444 solid 2px;
+  margin-top: 300px;
+}
+
+#userInput {
+  width: 50%;
+  border: #444 solid 3px;
+  border-radius: 10px;
+  height: 40px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#enter {
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: green;
+  color: #fff;
+  border: #444 solid 2px;
+  height: 40px;
+  width: 140px;
+}
+
+#userInput {
+  width: 60%;
+  margin: 0 auto;
+  border: #444 solid 2px;
+  background-color: white;
+  font-size: 1.2rem;
+}
+
+.nav-class {
+  margin: 0 auto;
+  width: 350px;
+  list-style: none;
+  padding: 10px 20px;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-weight: 600;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: #025f70;
+  transition: all 0.75s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5 ease;
+}
+
+.nav-class:hover {
+  background: #00891e;
+}
+
+.delete {
+  display: none;
+}
+
+.done {
+  background: #51df70 !important;
+  color: #00891e;
+}
+
+button {
+  float: right;
+  background-color: red;
+}
+
+#instruction {
+  font-size: 20px;
+}
+
+ul {
+  padding: 0;
+}
