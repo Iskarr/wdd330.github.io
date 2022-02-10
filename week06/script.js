@@ -73,18 +73,19 @@ function listItems() {
 })();
 
 function toggleClock() {
-  let li = document.getElementsByTagName("li");
-  for (let i = 0; i < li.length; i++) {
-    document.getElementsByClassName("done")[i].style.display = "none";
-  }
+  // let li = document.getElementsByTagName("li");
+  // for (let i = 0; i < li.length; i++) {
+  //   document.getElementsByClassName("done")[i].style.display = "none";
+  // }
 
-  //   $(".done").hide();
+  $(".done").hide();
 }
 
 function showComplete() {
-  //   $(".done").show();
-  let li = document.getElementsByTagName("li");
-  for (let i = 0; i < li.length; i++) {
-    document.getElementsByClassName("done")[i].style.display = "block";
-  }
+  $(".done").show();
+
+  // let li = document.getElementsByTagName("li");
+  // for (let i = 0; i < li.length; i++) {
+  //   document.getElementsByClassName("done")[i].style.display = "block";
+  // }
 }
