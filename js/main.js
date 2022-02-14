@@ -23,6 +23,10 @@ const links = [
     label: "Week 06 Project",
     url: "week06/index.html",
   },
+  {
+    label: "Week 07 notes",
+    url: "week07/index.html",
+  },
 ];
 
 links.forEach((element) => {
