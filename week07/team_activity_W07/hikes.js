@@ -1,8 +1,10 @@
+import CommentModel from "./comments.js";
+
 //create an array of hikes
-export const hikeList = [
+const hikeList = [
   {
     name: "Bechler Falls",
-    imgSrc: "falls.jpg",
+    imgSrc: "./images/falls.jpeg",
     imgAlt: "Image of Bechler Falls",
     distance: "3 miles",
     difficulty: "Easy",
@@ -13,8 +15,8 @@ export const hikeList = [
   },
   {
     name: "Teton Canyon",
-    imgSrc: "falls.jpg",
-    imgAlt: "Image of Bechler Falls",
+    imgSrc: "./images/falls.jpeg",
+    imgAlt: "Image of Teton Canyon",
     distance: "3 miles",
     difficulty: "Easy",
     description: "Beautiful short (or long) hike through Teton Canyon.",
@@ -23,8 +25,8 @@ export const hikeList = [
   },
   {
     name: "Denanda Falls",
-    imgSrc: "falls.jpg",
-    imgAlt: "Image of Bechler Falls",
+    imgSrc: "./images/falls.jpeg",
+    imgAlt: "Image of Denanda Falls",
     distance: "7 miles",
     difficulty: "Moderate",
     description:
@@ -34,34 +36,74 @@ export const hikeList = [
   },
 ];
 
-const imgBasePath = "//byui-cit.github.io/cit261/examples/";
+const imgBasePath = "//pwatson25.github.io/wdd330/images/";
+const hikeComments = new CommentModel("hike");
+const hikeCommentsElement = document.getElementById("comments");
 
-export function showHikeList() {
-  const hikeListElement = document.getElementById("hikes");
-  hikeListElement.innerHTML = "";
-  renderHikeList(hikeList, hikeListElement);
-}
+export default class Hikes {
+  renderOneHike(hike) {
+    const item = document.createElement("li");
 
-function renderHikeList(hikes, parent) {
-  hikes.forEach((hike) => {
-    parent.appendChild(renderOneHike(hike));
-  });
-}
-function renderOneHike(hike) {
-  const item = document.createElement("li");
-
-  item.innerHTML = ` <h2>${hike.name}</h2>
-        <div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
+    item.innerHTML = ` 
+    <div class="two-column">
+      <div class="image">
+        <img src="./images/falls.jpeg" alt="${hike.imgAlt}">
+      </div>
+      <div>
         <div>
-                <div>
-                    <h3>Distance</h3>
-                    <p>${hike.distance}</p>
-                </div>
-                <div>
-                    <h3>Difficulty</h3>
-                    <p>${hike.difficulty}</p>
-                </div>
-        </div>`;
+          <h3>Distance</h3>
+          <p>${hike.distance}</p>
+        </div>
+        <div>
+          <h3>Difficulty</h3>
+          <p>${hike.difficulty}</p>
+        </div>
+      </div>
+    </div>
+    `;
 
-  return item;
+    return item;
+  }
+  renderHikeList(hikes, parent) {
+    hikes.forEach((hike) => {
+      const heading = document.createElement("h2");
+      const hikeInfo = document.createElement("div");
+      hikeInfo.classList.add("hidden");
+      heading.innerText = hike.name;
+      parent.appendChild(heading);
+      parent.appendChild(hikeInfo);
+      hikeInfo.appendChild(this.renderOneHike(hike));
+      const commentSection = document.createElement("ul");
+      const form = document.createElement("form");
+      const input = document.createElement("input");
+      const button = document.createElement("button");
+      button.textContent = "Add Comment";
+      form.appendChild(input);
+      form.appendChild(button);
+
+      hikeInfo.appendChild(commentSection);
+      hikeInfo.appendChild(form);
+
+      hikeComments.renderCommentList(commentSection, hike.name);
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const comment = input.value.trim();
+        input.value = "";
+        if (comment) {
+          hikeComments.addComment(hike.name, comment);
+          hikeComments.renderCommentList(commentSection, hike.name);
+          hikeComments.renderCommentList(hikeCommentsElement);
+        }
+      });
+      heading.addEventListener("click", () => {
+        hikeInfo.classList.toggle("hidden");
+      });
+    });
+  }
+  showHikeList() {
+    const hikeListElement = document.getElementById("hikes");
+    hikeListElement.innerHTML = "";
+    this.renderHikeList(hikeList, hikeListElement);
+    hikeComments.renderCommentList(hikeCommentsElement);
+  }
 }

@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Great Hikes</title>
+    <meta charset="utf-8" />
+    <title>Great Hikes (dynamic DOM example)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css">
   </head>
+
+  <body>
   <body>
     <main>
       <h1>Great hikes</h1>
       <ul id="hikes" class="hikeStyles">
         <!-- your hike list should be build here. -->
       </ul>
+      <h2>All comments</h2>
+      <ul id="comments" class="comments">
+        <!-- list comments-->
+      </ul>
     </main>
-
-    <script src="./hike.js"></script>
+    
+    <details>
+      <summary>comments</summary>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </details>
     <script src="main.js" type="module"></script>
   </body>
 </html>
