@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
     <title>Week 5 notes</title>
   </head>
   <body>
     <h1>Week 05 notes</h1>
 
     <h2>debugging</h2>
-    <ul>
+    <ol class="gradient-list">
       <li>
         depending on the warning, you can see a lot of different ones from
         direct errors, to exceptions, and warnings
@@ -24,8 +25,9 @@
       <li>
         Error objects can be created as constructor functions which will output
         an error or exception with the following code:
+        <hr />
+        <code>const error = new Error("Oops, something went wrong")</code>
       </li>
-      <code>const error = new Error("Oops, something went wrong")</code>
       <li>
         There are many different types of errors such as syntax erros, reference
         errors, type errors, internal erros and more!
@@ -39,7 +41,7 @@
         You can use somthing like Jest with node to manage test driven
         development, which will help you test your code.
       </li>
-    </ul>
+    </ol>
 
     <div>
       <a href="./milestone_project/index.html">Milestone Project: Todo App</a>
