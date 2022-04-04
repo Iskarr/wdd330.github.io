@@ -1,0 +1,300 @@
+Kimenzi #3036 Austin — 03/02/2022 I couldn’t make it today I’m sorry I had a
+huge meeting I couldn’t skip Eddie — 03/02/2022
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Drum Kit</title>
+    <link rel="stylesheet" href="style.css" />
+    Expand index.html 2 KB const keys =
+    Array.from(document.querySelector('.keys').children) const audios =
+    Array.from(document.querySelectorAll('audio')) const playAudio = (code) => {
+    const audio = audios.find((audio) => audio.dataset.key == code) const key =
+    keys.find((key) => key.dataset.key == code) Expand main.js 2 KB html {
+    font-size: 10px; background: url(http://i.imgur.com/b9r5sEL.jpg) bottom
+    center; background-size: cover; } Expand style.css 1 KB VidGamesPete 1500 —
+    03/03/2022 i added our drum kit project to my portfolio and for some reason
+    the background image wont show when i use live server. its sending a
+    forbidden 403 error. did anyone else run into that? i can search the url and
+    the image comes up fine but our site is getting the error when it tries to
+    use it. VidGamesPete 1500 — 03/03/2022 i figured it out.i just downloaded
+    the file and linked to it that way so that i dont have to worry about it.
+    UnclePete — 03/09/2022 Hey guys, I'm looking over the Quakes project. I'm
+    confused about this refactor step. It says to create the appropriate
+    functions. But isn't this the function? Doesn't step 06 replace the first
+    draft in step 05? Oh I see. Never mind.. Eddie — 03/09/2022
+    https://prod.liveshare.vsengsaas.visualstudio.com/join?AA9D07BD353A3479F60F11FD68DC0CB67566
+    Visual Studio Code for the Web Build with Visual Studio Code, anywhere,
+    anytime, entirely in your browser.
+    https://db48-205-185-99-127.ngrok.io/week10/teamactivity/ UnclePete —
+    03/09/2022 Can you guys same something... I think my audio might not be
+    working VidGamesPete 1500 — 03/09/2022 i said something UnclePete —
+    03/09/2022 Bother... Alright I have audio now Eddie — 03/09/2022
+    https://prod.liveshare.vsengsaas.visualstudio.com/join?7D7E1756DB31EEACBA700A1DC75736BCE359
+    Visual Studio Code for the Web Build with Visual Studio Code, anywhere,
+    anytime, entirely in your browser. UnclePete — 03/09/2022 Hey guys, I gotta
+    run. Eddie — 03/09/2022
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <title>Local Quakes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        Expand index.html 1 KB import { getJSON, getLocation } from
+        './utilities.js' import QuakesController from './QuakesController.js'
+        const radiusInput = document.getElementById('radius') const qc = new
+        QuakesController('#quakeList') Expand index.js 1 KB import { getJSON,
+        getLocation } from './utilities.js' const baseUrl =
+        'https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2020-01-01&endtime=2020-02-02'
+        let quakes = [] Expand main.js 2 KB import { getJSON } from
+        './utilities.js' // Quake Model export default class Quake {
+        constructor() { this.baseUrl =
+        'https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2019-01-01&endtime=2019-03-02'
+        Expand Quake.js 1 KB import { getLocation } from './utilities.js' import
+        Quake from './Quake.js' import QuakesView from './QuakesView.js' //
+        Quake controller export default class QuakesController { Expand
+        QuakesController.js 2 KB const earthquakeListTemplate = (quake) => `
+        <li data-id="${quake.id}">
+          <b>${quake.properties.title}</b>
+          ${new Date(quake.properties.time).toLocaleString()}
+        </li>
+        ` Expand QuakesView.js 2 KB :root { font-family: sans-serif; }
+        .background { position: fixed; Expand style.css 1 KB export function
+        getJSON(url) { return fetch(url) .then(function (response) { if
+        (!response.ok) { throw Error(response.statusText) } else { Expand
+        utilities.js 1 KB VidGamesPete 1500 — 03/09/2022 thanks eddie ShayDan —
+        Today at 9:12 AM Hey sorry I can’t attend the meeting today. I have to
+        work late and won’t be able to get on my computer. VidGamesPete 1500 —
+        Today at 11:42 AM Thanks for letting us know Eddie — Today at 11:45 AM
+        Guys just a heads up for this project, we need to run both a client and
+        a server app. I can share the client app like we've done in the past,
+        but I think each of us will need to download and run the server code
+        individually. Not 100% sure on this, though VidGamesPete 1500 — Today at
+        12:01 PM If it's running as a local server then it's likely we will each
+        do it individually. Eddie — Today at 12:04 PM
+        https://f452-205-185-99-127.ngrok.io/week11/client/
+        https://prod.liveshare.vsengsaas.visualstudio.com/join?C643A36374F50CCE706E4A02E7E3E9D10D4B
+        Visual Studio Code for the Web Build with Visual Studio Code, anywhere,
+        anytime, entirely in your browser. UnclePete — Today at 12:11 PM I might
+        be having audio issues again... Austin — Today at 12:13 PM I'm muted due
+        to work right now anything we can do to help @UnclePete VidGamesPete
+        1500 — Today at 12:13 PM I can get on at the usual time in about 45mins
+        Eddie — Today at 12:13 PM The usual time? UnclePete — Today at 12:14 PM
+        He's from Arizona Ignore him Eddie — Today at 12:14 PM oooooooooh
+        UnclePete — Today at 12:14 PM They don't believe in Daylight savings
+        Eddie — Today at 12:15 PM Let's maybe hold off then UnclePete — Today at
+        12:15 PM Okay VidGamesPete 1500 — Today at 12:16 PM Yeah sorry haha
+        didn't realize the time changed. Austin — Today at 12:17 PM Can we all
+        be like arizona and ignore daylight savings lol VidGamesPete 1500 —
+        Today at 12:18 PM That would be nice. Isn't that a bill they are trying
+        to pass right now? Austin — Today at 12:19 PM Oh and I am curious if
+        anyone wants to answer this, but why do we still do daylight savings? I
+        guess I never really understood it Also it might be, I'm not sure.
+        UnclePete — Today at 12:19 PM Farmers We are giving you more daylight,
+        Austin. That way you can grow more crops. Austin — Today at 12:21 PM Ah
+        yes I almost forgot about my crops 😮 UnclePete — Today at 12:22 PM Yes.
+        Very important. Must grow crops to live. But in Arizona, nothing grows
+        🤷‍♂️ VidGamesPete 1500 — Today at 12:23 PM Found this
+        https://www.msn.com/en-us/news/us/why-do-we-have-daylight-saving-time-and-how-did-it-start/ar-AAV8REC?ocid=uxbndlbing
+        MSN Why Do We Have Daylight Saving Time and How Did It Start? With the
+        United States potentially making daylight saving time permanent, many
+        are wondering how did we get here and when did it all start? Why Do We
+        Have Daylight Saving Time and How Did It Start? Seems like it was more
+        for folks not to need to burn fuel for lighting as much during winter
+        months And it mentions to allow more daylight for trick or treaters at
+        one point haha Eddie — Today at 1:05 PM @UnclePete you ready? UnclePete
+        — Today at 1:06 PM Sorry! Austin — Today at 1:52 PM Image Eddie — Today
+        at 2:44 PM //Auth class which provides basic JWT based authentication
+        for our app. // Requires: access to the makeRequest functions import {
+        makeRequest } from './authHelpers.js' export default class Auth {
+        constructor(errors) { this.jwtToken = '' Expand Auth.js 3 KB import {
+        errors } from './main.js' // Server Address const baseURL =
+        'http://127.0.0.1:3000/' // helper function to make an http request with
+        fetch. // returns a json object export async function makeRequest(url,
+        method = 'GET', body = null, token = null) { Expand authHelpers.js 2 KB
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="utf-8" />
+            <title>Week 11</title>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+            <link rel="stylesheet" href="style.css" />
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            />
+            <script src="main.js" type="module"></script>
+          </head>
+          <body>
+            <main>
+              <h1>Week 11</h1>
+              <!-- <form id="login">
+        <input type="text" name="username" id="username" />
+        <input type="password" name="password" id="password" />
+        <button type="submit" id="submit">Log in</button>
+      </form> -->
+              <div id="errors" class="errors hidden"></div>
+
+              <ul id="posts"></ul>
+
+              <div class="container" id="loginForm">
+                <div class="screen">
+                  <div class="screen__content">
+                    <form class="login" id="login">
+                      <div class="login__field">
+                        <i class="fa fa-user" style="font-size: 24px"></i>
+                        <input
+                          type="text"
+                          class="login__input"
+                          name="username"
+                          id="username"
+                          placeholder="User name / Email"
+                        />
+                      </div>
+                      <div class="login__field">
+                        <i class="fa fa-lock" style="font-size: 24px"></i>
+                        <input
+                          type="password"
+                          class="login__input"
+                          name="password"
+                          id="password"
+                          placeholder="Password"
+                        />
+                      </div>
+                      <button class="button login__submit" id="submit">
+                        <span class="button__text">Log In Now</span>
+                        <i
+                          class="fa fa-toggle-right"
+                          style="font-size: 24px; margin-left: 50%"
+                        ></i>
+                      </button>
+                    </form>
+                  </div>
+                  <div class="screen__background">
+                    <span
+                      class="screen__background__shape screen__background__shape4"
+                    ></span>
+                    <span
+                      class="screen__background__shape screen__background__shape3"
+                    ></span>
+                    <span
+                      class="screen__background__shape screen__background__shape2"
+                    ></span>
+                    <span
+                      class="screen__background__shape screen__background__shape1"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <ul id="posts"></ul>
+              <form id="newPostForm">
+                <label for="title">Post Title</label>
+                <input type="text" name="title" id="postTitle" required />
+                <label for="content">Content</label>
+                <input type="text" name="content" id="postContent" required />
+                <button type="submit">Add Post</button>
+              </form>
+            </main>
+          </body>
+        </html>
+        Collapse index.html 3 KB import { makeRequest, Errors } from
+        './authHelpers.js' import Auth from './Auth.js' // makeRequest('login',
+        'POST', { // password: 'user1', // email: 'user1@email.com', Expand
+        main.js 2 KB @import
+        url('https://fonts.googleapis.com/css?family=Raleway:400,700'); * {
+        box-sizing: border-box; margin: 0; padding: 0; Expand style.css 4 KB ﻿
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="utf-8" />
+            <title>Week 11</title>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+            <link rel="stylesheet" href="style.css" />
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            />
+            <script src="main.js" type="module"></script>
+          </head>
+          <body>
+            <main>
+              <h1>Week 11</h1>
+              <!-- <form id="login">
+        <input type="text" name="username" id="username" />
+        <input type="password" name="password" id="password" />
+        <button type="submit" id="submit">Log in</button>
+      </form> -->
+              <div id="errors" class="errors hidden"></div>
+
+              <ul id="posts"></ul>
+
+              <div class="container" id="loginForm">
+                <div class="screen">
+                  <div class="screen__content">
+                    <form class="login" id="login">
+                      <div class="login__field">
+                        <i class="fa fa-user" style="font-size: 24px"></i>
+                        <input
+                          type="text"
+                          class="login__input"
+                          name="username"
+                          id="username"
+                          placeholder="User name / Email"
+                        />
+                      </div>
+                      <div class="login__field">
+                        <i class="fa fa-lock" style="font-size: 24px"></i>
+                        <input
+                          type="password"
+                          class="login__input"
+                          name="password"
+                          id="password"
+                          placeholder="Password"
+                        />
+                      </div>
+                      <button class="button login__submit" id="submit">
+                        <span class="button__text">Log In Now</span>
+                        <i
+                          class="fa fa-toggle-right"
+                          style="font-size: 24px; margin-left: 50%"
+                        ></i>
+                      </button>
+                    </form>
+                  </div>
+                  <div class="screen__background">
+                    <span
+                      class="screen__background__shape screen__background__shape4"
+                    ></span>
+                    <span
+                      class="screen__background__shape screen__background__shape3"
+                    ></span>
+                    <span
+                      class="screen__background__shape screen__background__shape2"
+                    ></span>
+                    <span
+                      class="screen__background__shape screen__background__shape1"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <ul id="posts"></ul>
+              <form id="newPostForm">
+                <label for="title">Post Title</label>
+                <input type="text" name="title" id="postTitle" required />
+                <label for="content">Content</label>
+                <input type="text" name="content" id="postContent" required />
+                <button type="submit">Add Post</button>
+              </form>
+            </main>
+          </body>
+        </html>
+      </head>
+    </html>
+  </head>
+</html>
